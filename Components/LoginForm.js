@@ -2,14 +2,6 @@ import React from 'react'
 import { StyleSheet, View, Image, TextInput, Button, Text, TouchableOpacity } from 'react-native'
 
 class LoginForm extends React.Component {
-
-    constructor(props){
-        super(props)
-    }
-
-    _displayHome = () => {
-      this.props.navigation.navigate("Home")
-    }
     
     render() {
         return (
