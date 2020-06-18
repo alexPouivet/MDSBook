@@ -8,11 +8,18 @@ class Home extends React.Component {
       this.props.navigation.navigate("Login")
   }
 
+    _displayBarCodeScanner = () => {
+      this.props.navigation.navigate("BarCodeScanner")
+  }
+
   render() {
     return (
       <View style={styles.main_container}>
         <Text>Home</Text>
-        
+
+        <TouchableOpacity onPress={this._displayBarCodeScanner}>
+            <Text>Scanner un livre</Text>
+        </TouchableOpacity>
         <TouchableOpacity onPress={this._displayLogin}>
             <Text>Login</Text>
         </TouchableOpacity>

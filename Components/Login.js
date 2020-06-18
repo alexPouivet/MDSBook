@@ -1,25 +1,22 @@
 import React from 'react'
-import { StyleSheet, View, TextInput, Button, Text, TouchableOpacity } from 'react-native'
+import { StyleSheet, View, Image, TextInput, Button, Text, TouchableOpacity } from 'react-native'
+import LoginForm from './LoginForm'
+
 
 class Login extends React.Component {
 
-    constructor(props){
-        super(props)
-    }
-
-        _displayHome = () => {
-          this.props.navigation.navigate("Home")
-    }
-
   render() {
     return (
-      <View style={styles.main_container}>
-        <TextInput placeholder = "Email" autoCompleteType = "email"></TextInput>
-        <TextInput placeholder = "Mot de passe" secureTextEntry = {true}></TextInput>
-        <View style={styles.button_container}>
-            <TouchableOpacity onPress={this._displayHome}>
-                <Text>Se connecter</Text>
-            </TouchableOpacity>
+      <View style={styles.container}>
+        <View style={styles.logoContainer}>
+          <Image
+            style={styles.logo}
+            source={require('../images/logo.png')}
+          />
+          <Text style={styles.title}>MDSBook, made in React Native</Text>
+        </View>
+        <View style={styles.formContainer}>
+          <LoginForm navigation={this.props.navigation}/>
         </View>
       </View>
     )
@@ -27,26 +24,28 @@ class Login extends React.Component {
 }
 
 const styles = StyleSheet.create({
-  main_container: {
+  container: {
     flex: 1,
-    marginTop: 20
+    backgroundColor: '#3498db'
   },
-  button_container: {
-
+  logoContainer: {
+    alignItems: 'center',
+    flexGrow: 1,
+    justifyContent: 'center'
   },
-  button: {
-    alignItems: "center",
-    backgroundColor: "#DDDDDD",
-    padding: 10
+  logo: {
+    width: 100,
+    height: 100
   },
-  textinput: {
-    marginLeft: 5,
-    marginRight: 5,
-    height: 50,
-    borderColor: '#000000',
-    borderWidth: 1,
-    paddingLeft: 5
+  title: {
+    color: '#fff',
+    marginTop: 10,
+    width: 160,
+    textAlign: 'center',
+    opacity: 0.9
   }
 })
+
+
 
 export default Login
