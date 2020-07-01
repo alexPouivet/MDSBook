@@ -5,6 +5,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
 import { Ionicons } from '@expo/vector-icons';
 import Settings from './Settings'
+import { BarCodeScanner } from 'expo-barcode-scanner';
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
