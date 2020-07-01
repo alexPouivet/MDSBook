@@ -6,7 +6,7 @@ export default function ReturnBookMainScreen({ navigation }) {
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
         <Button
           title="Scanner le livre à retourner"
-          onPress={() => navigation.navigate('BarCodeScanner')}
+          onPress={() => navigation.navigate('Retourner un livre')}
         />
       </View>
     );

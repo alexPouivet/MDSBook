@@ -9,8 +9,8 @@ export default function AddBookMainScreen({ navigation }) {
           style={styles.input} 
           />
         <Button
-          title="Scanner le livre à retourner"
-          onPress={() => navigation.navigate('BarCodeScanner')}
+          title="Scanner le livre à emprunter"
+          onPress={() => navigation.navigate('Ajouter un livre')}
         />
       </View>
     );

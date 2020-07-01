@@ -25,8 +25,8 @@ export default class ItemBook extends React.Component {
                 </View>
                 <View style={styles.button}>
                     <Button
-                        title="Retourner le livre"
-                        onPress={() => navigation.navigate('Rendre',{screen: 'BarCodeScanner'})}
+                        title="Rendre le livre"
+                        onPress={() => navigation.navigate('Rendre',{screen: 'Retourner un livre'})}
                     />
                 </View>
             </View>

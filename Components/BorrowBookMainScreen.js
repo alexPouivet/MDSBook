@@ -26,7 +26,7 @@ export default class BorrowBookMainScreen extends React.Component {
                     }
                     bottomDivide
                     chevron
-                    button onPress={() => navigation.navigate('ItemBook', { book: item })}
+                    button onPress={() => navigation.navigate('Détails livre', { book: item })}
                   />
                 ))
               }
@@ -35,8 +35,8 @@ export default class BorrowBookMainScreen extends React.Component {
         </View>
         <View style={styles.button}>
           <Button
-            title="Emprunter un nouveau livre"
-            onPress={() => navigation.navigate('BarCodeScannerBorrowBooks')}
+            title="Emprunter un livre"
+            onPress={() => navigation.navigate('Emprunter un livre')}
           />
         </View>
       </View>

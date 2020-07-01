@@ -76,9 +76,9 @@ export default function Home() {
 function BorrowBookScreen() {
   return (
     <Stack.Navigator>
-      <Stack.Screen name="BorrowBookMainScreen" component={BorrowBookMainScreen} />
-      <Stack.Screen name="BarCodeScannerBorrowBooks" component={BarCodeScannerScreen} />
-      <Stack.Screen name="ItemBook" component={ItemBook} />
+      <Stack.Screen name="Page emprunter un livre" component={BorrowBookMainScreen} />
+      <Stack.Screen name="Emprunter un livre" component={BarCodeScannerScreen} />
+      <Stack.Screen name="Détails livre" component={ItemBook} />
     </Stack.Navigator>
   );
 }
@@ -87,8 +87,8 @@ function BorrowBookScreen() {
 function ReturnBookScreen() {
   return (
     <Stack.Navigator>
-      <Stack.Screen name="BarCode" component={ReturnBookMainScreen} />
-      <Stack.Screen name="BarCodeScanner" component={BarCodeScannerScreen} />
+      <Stack.Screen name="Page rendre un livre" component={ReturnBookMainScreen} />
+      <Stack.Screen name="Retourner un livre" component={BarCodeScannerScreen} />
     </Stack.Navigator>
   );
 }
@@ -97,8 +97,8 @@ function ReturnBookScreen() {
 function AddBookScreen() {
   return (
     <Stack.Navigator>
-      <Stack.Screen name="BarCode" component={AddBookMainScreen} />
-      <Stack.Screen name="BarCodeScanner" component={BarCodeScannerScreen} />
+      <Stack.Screen name="Page Ajouter un livre" component={AddBookMainScreen} />
+      <Stack.Screen name="Ajouter un livre" component={BarCodeScannerScreen} />
     </Stack.Navigator>
   );
 }
