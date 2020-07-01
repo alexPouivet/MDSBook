@@ -9,6 +9,7 @@ import BorrowBookMainScreen from './BorrowBookMainScreen'
 import BarCodeScannerScreen from './BarCodeScannerScreen'
 import ReturnBookMainScreen from './ReturnBookMainScreen'
 import AddBookMainScreen from './AddBookMainScreen'
+import ItemBook from './ItemBook'
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -75,8 +76,9 @@ export default function Home() {
 function BorrowBookScreen() {
   return (
     <Stack.Navigator>
-      <Stack.Screen name="BarCode" component={BorrowBookMainScreen} />
-      <Stack.Screen name="BarCodeScanner" component={BarCodeScannerScreen} />
+      <Stack.Screen name="BorrowBookMainScreen" component={BorrowBookMainScreen} />
+      <Stack.Screen name="BarCodeScannerBorrowBooks" component={BarCodeScannerScreen} />
+      <Stack.Screen name="ItemBook" component={ItemBook} />
     </Stack.Navigator>
   );
 }
