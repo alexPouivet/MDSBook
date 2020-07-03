@@ -4,12 +4,14 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
 import { Ionicons } from '@expo/vector-icons';
-import Settings from './Settings'
 import BorrowBookMainScreen from './BorrowBookMainScreen'
-import BarCodeScannerScreen from './BarCodeScannerScreen'
+import ItemBook from './ItemBook'
 import ReturnBookMainScreen from './ReturnBookMainScreen'
 import AddBookMainScreen from './AddBookMainScreen'
-import ItemBook from './ItemBook'
+import AccountMainScreen from './AccountMainScreen'
+import InformationsScreen from './InformationsScreen'
+import ParametersScreen from './ParametersScreen'
+import BarCodeScannerScreen from './BarCodeScannerScreen'
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -47,10 +49,10 @@ export default function Home() {
                 />
               );
             }
-            else if (route.name === 'Paramètres') {
+            else if (route.name === 'Compte') {
               return (
                 <Ionicons
-                  name={focused ? 'ios-list-box' : 'ios-list'}
+                  name='md-person'
                   size={size}
                   color={color}
                 />
@@ -66,7 +68,7 @@ export default function Home() {
         <Tab.Screen name="Emprunter" component={BorrowBookScreen} />
         <Tab.Screen name="Rendre" component={ReturnBookScreen} />
         <Tab.Screen name="Ajouter" component={AddBookScreen} />
-        <Tab.Screen name="Paramètres" component={SettingsScreen} />
+        <Tab.Screen name="Compte" component={AccountScreen} />
       </Tab.Navigator>
     </NavigationContainer>
   );
@@ -104,10 +106,12 @@ function AddBookScreen() {
 }
 
 // Settings Screens
-function SettingsScreen() {
+function AccountScreen() {
   return (
-    <View>
-      <Settings/>
-    </View>
+    <Stack.Navigator>
+    <Stack.Screen name="Mon compte" component={AccountMainScreen} />
+    <Stack.Screen name="Informations" component={InformationsScreen} />
+    <Stack.Screen name="Paramètres" component={ParametersScreen} />
+  </Stack.Navigator>
   );
 }

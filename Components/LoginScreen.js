@@ -2,6 +2,24 @@ import React from 'react'
 import { StyleSheet, View, Image, TextInput, Button, Text, TouchableOpacity } from 'react-native'
 import LoginForm from './LoginForm'
 
+/*
+function Login({ navigation }){
+  return (
+    <View style={styles.container}>
+      <View style={styles.logoContainer}>
+        <Image
+          style={styles.logo}
+          source={require('../images/logo.png')}
+        />
+        <Text style={styles.title}>MDSBook, made in React Native</Text>
+      </View>
+      <View style={styles.formContainer}>
+        <LoginForm navigation={navigation}/>
+      </View>
+    </View>
+  )
+}
+*/
 
 class Login extends React.Component {
 
